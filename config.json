@@ -1,0 +1,12 @@
+{
+    "user_1": {
+        "token": "TON TOKEN",
+        "id": "TON ID",
+        "prefix": "?"
+    },
+
+    "user_2": {
+        "footer": "Ice Logger",
+        "autosnipe": "off"
+    }
+}
