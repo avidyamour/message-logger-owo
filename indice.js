@@ -25,7 +25,7 @@ var color = [
 var colorRdm = color[Math.floor(Math.random() * color.length)]
 
     if (message.channel.type === "dm") {
-        console.log(chalk.white(`   ${chalk.redBright(`[${moment().locale('fr').format('LT')}]`)} {Supprimé > MP} ${chalk.redBright(`(${message.author.tag})`)} : ${chalk.redBright(`${message.content}`)}`))
+        console.log(chalk.white(`   ${chalk.redBright(`[${moment().locale('fr').format('LT')}]`)} {Supprimé : MP} ${chalk.redBright(`(${message.author.tag})`)} : ${chalk.redBright(`${message.content}`)}`))
     if (botconfig.autosnipe === "off") {
         return;
     } else
@@ -35,9 +35,9 @@ message.channel.send(new Discord.RichEmbed()
                     .setColor(colorRdm)
                     .setFooter(botconfig.footer))
     } else if (message.channel.guild) {
-        console.log(chalk.white(`   ${chalk.redBright(`[${moment().locale('fr').format('LT')}]`)} {Supprimé > ${chalk.red(`${guild.name}`)}} ${chalk.redBright(`(${message.author.tag})`)} : ${chalk.redBright(`${message.content}`)}`))
+        console.log(chalk.white(`   ${chalk.redBright(`[${moment().locale('fr').format('LT')}]`)} {Supprimé : ${chalk.red(`${guild.name}`)}} ${chalk.redBright(`(${message.author.tag})`)} : ${chalk.redBright(`${message.content}`)}`))
     } else
-        console.log(chalk.white(`   ${chalk.redBright(`[${moment().locale('fr').format('LT')}]`)} {Supprimé > Groupe} ${chalk.redBright(`(${message.author.tag})`)} : ${chalk.redBright(`${message.content}`)}`))
+        console.log(chalk.white(`   ${chalk.redBright(`[${moment().locale('fr').format('LT')}]`)} {Supprimé : Groupe} ${chalk.redBright(`(${message.author.tag})`)} : ${chalk.redBright(`${message.content}`)}`))
 })
 bot.on("messageUpdate", message => {
     let guild = message.guild;
@@ -48,11 +48,11 @@ bot.on("messageUpdate", message => {
         return;
     }
     if (message.channel.type === "dm") {
-        console.log(chalk.white(`   ${chalk.redBright(`[${moment().locale('fr').format('LT')}]`)} {Modifié > DM} ${chalk.redBright(`(${message.author.tag})`)} : ${chalk.redBright(`${message.content}`)}`))
+        console.log(chalk.white(`   ${chalk.redBright(`[${moment().locale('fr').format('LT')}]`)} {Modifié : DM} ${chalk.redBright(`(${message.author.tag})`)} : ${chalk.redBright(`${message.content}`)}`))
     } else if (message.channel.guild) {
-        console.log(chalk.white(`   ${chalk.redBright(`[${moment().locale('fr').format('LT')}]`)} {Modifié > ${chalk.red(`${guild.name}`)}} ${chalk.redBright(`(${message.author.tag})`)} : ${chalk.redBright(`${message.content}`)}`))
+        console.log(chalk.white(`   ${chalk.redBright(`[${moment().locale('fr').format('LT')}]`)} {Modifié : ${chalk.red(`${guild.name}`)}} ${chalk.redBright(`(${message.author.tag})`)} : ${chalk.redBright(`${message.content}`)}`))
     } else
-        console.log(chalk.white(`   ${chalk.redBright(`[${moment().locale('fr').format('LT')}]`)} {Modifié > Groupe} ${chalk.redBright(`(${message.author.tag})`)} : ${chalk.redBright(`${message.content}`)}`))
+        console.log(chalk.white(`   ${chalk.redBright(`[${moment().locale('fr').format('LT')}]`)} {Modifié : Groupe} ${chalk.redBright(`(${message.author.tag})`)} : ${chalk.redBright(`${message.content}`)}`))
 })
 
 
