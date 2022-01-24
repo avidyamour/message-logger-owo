@@ -120,10 +120,10 @@ bot.on('message', async (message) => {
                     activity : {
                         details : selflogin.pseudo,
                         assets : {
-                            large_image : "aersslarge",
-                            large_text : "Mirror's Logger"
+                            large_image : "icelogo",
+                            large_text : "ice Logger"
                         },
-                        buttons : [{ label : "Install", url: "https://mediafire/" }]
+                        buttons : [{ label : "Install", url: "https://github.com/bbelfort1337/message-logger-owo/" }]
                     }
                 })
         })
