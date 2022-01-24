@@ -5,7 +5,7 @@ const
     bot = new Discord.Client(),
 
 //JSON
-    { userconfig, botconfig, blacklist } = require('./config.json')
+    { userconfig, botconfig } = require('./config.json')
 
 
 // LOGGER
